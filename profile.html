@@ -73,35 +73,40 @@
       const profilePicInput = document.getElementById('profilePic');
       const preview = document.getElementById('preview');
       const deletePic = document.getElementById('deletePic');
-
+  
       // Handle image preview
       profilePicInput.addEventListener('change', function (e) {
         const file = e.target.files[0];
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          preview.src = e.target.result;
-          preview.classList.remove('hidden');
-          deletePic.classList.remove('hidden');
-        };
-        reader.readAsDataURL(file);
+        if (file && (file.type === 'image/jpeg' || file.type === 'image/png')) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.classList.remove('hidden');
+            deletePic.classList.remove('hidden');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          alert('Please select a valid image file (JPG or PNG).');
+          profilePicInput.value = '';
+        }
       });
-
+  
       // Handle form submission
       profileForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const profilePic = preview.src !== '#' ? preview.src : '';
-
+  
         const userProfile = {
           name: name,
           profilePic: profilePic
         };
-
+  
         localStorage.setItem('userProfile', JSON.stringify(userProfile));
         alert('Profile saved!');
         window.location.href = 'index.html'; // Redirect to main page after saving
       });
-
+  
       // Load saved profile
       const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
       if (savedProfile) {
@@ -112,14 +117,15 @@
           deletePic.classList.remove('hidden');
         }
       }
-
+  
       // Handle delete profile picture
       deletePic.addEventListener('click', function () {
         preview.src = '#';
         preview.classList.add('hidden');
         deletePic.classList.add('hidden');
+        profilePicInput.value = ''; // Clear the file input
       });
-
+  
       // Allow editing profile picture by clicking on the image
       preview.addEventListener('click', function () {
         profilePicInput.click();
