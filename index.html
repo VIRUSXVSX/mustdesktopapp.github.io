@@ -20,8 +20,8 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=kNVy8E"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=kNVy8E" type="text/css">
-  
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=VAgLGm"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=VAgLGm" type="text/css">
+
   <style>
     .circular-image {
       border-radius: 50%;
@@ -46,6 +46,8 @@
 			background-color: #0056b3;
 		}
 	</style>
+  
+  
 </head>
 <body>
   
@@ -76,7 +78,7 @@
 						<a class="nav-link link text-black text-primary display-4" href="about.html" aria-expanded="false"><span class="mobi-mbri mobi-mbri-smile-face mbr-iconfont mbr-iconfont-btn" style="color: rgb(166, 169, 156);"></span>About</a>
 					</li>
 					<li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="profile.html"><span class="mbrib-user mbr-iconfont mbr-iconfont-btn" style="color: rgb(0, 140, 255);"></span>User</a></li></ul>
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-black-outline display-4" href="https://virusxvsx.github.io/virusmust.github.io/">Visit our website</a></div>
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-black-outline display-4" href="https://virusxvsx.github.io/mustdesktop.github.io">Visit our website</a></div>
 			</div>
 		</div>
 	</nav>
@@ -101,14 +103,13 @@
 						
 						<h5 class="card-title mbr-fonts-style display-5">
 							<strong>Visit our website</strong></h5>
-						
-						<p class="card-text mbr-fonts-style display-7"></p>
-						<div class="mbr-section-btn mt-auto"><a class="btn btn-lg btn-primary display-7" href="https://virusxvsx.github.io/mustdesktop.github.io/" target="_blank">Visit</a></div>
-						<p id="linkToCopy">https://virusxvsx.github.io/mustdesktop.github.io</p>
-						<button class="copy-button" onclick="copyToClipboard()">Copy Link</button>
+							<p class="card-text mbr-fonts-style display-7"></p>
+							<div class="mbr-section-btn mt-auto"><a class="btn btn-lg btn-primary display-7" href="https://virusxvsx.github.io/mustdesktop.github.io/" target="_blank">Visit</a></div>
+							<p id="linkToCopy">https://virusxvsx.github.io/mustdesktop.github.io</p>
+							<button class="copy-button" onclick="copyToClipboard()">Copy Link</button>
+						</div>
 					</div>
 				</div>
-			</div>
 			<div class="item features-without-image col-12 col-md-6 col-lg-6 item-mb">
 				<div class="item-wrapper">
 					<div class="card-box align-left">
@@ -136,17 +137,6 @@
 				</div>
 			</div>
 			<div class="item features-without-image col-12 col-md-6 col-lg-6 item-mb">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						
-						<h5 class="card-title mbr-fonts-style display-5">
-							<strong>Contact Us</strong></h5>
-						
-						<p class="card-text mbr-fonts-style display-7"></p>
-						<div class="mbr-section-btn mt-auto"><a class="btn btn-lg btn-primary display-7" href="contact.html">More</a></div>
-					</div>
-				</div>
-			</div><div class="item features-without-image col-12 col-md-6 col-lg-6 item-mb">
 				<div class="item-wrapper">
 					<div class="card-box align-left">
 						
@@ -181,7 +171,7 @@
             </div>
             
             
-            <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">new ui and new features</h6>
+            <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">new ui and new features and fix bugs</h6>
             
           </div>
         </div>
@@ -189,65 +179,64 @@
 
       </div>
     </div>
-  </div>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script> 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Load saved profile
-      const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
-      if (savedProfile) {
-        const welcomeUser = document.getElementById('welcomeUser');
-        const navProfilePic = document.getElementById('navProfilePic');
-        welcomeUser.textContent = `Welcome, ${savedProfile.name}`;
-		welcomeUser.setAttribute('style', 'color: black !important;');  // Set text color to white with high priority
-        
-        if (savedProfile.profilePic) {
-          navProfilePic.src = savedProfile.profilePic;
-          navProfilePic.classList.remove('hidden');
-        }
-      }
-    });
-  </script>
-   <script>
-	// Function to redirect based on color scheme
-	function redirectToAppropriateSite() {
-	  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		// Redirect to the dark mode URL
-		window.location.href = "dark/index.html";
-
-	  }
-	}
-  
-	// Check color scheme preference on load
-	redirectToAppropriateSite();
-  
-	// Add an event listener to detect changes in color scheme preference
-	window.matchMedia('(prefers-color-scheme: dark)').addListener(redirectToAppropriateSite);
-	window.matchMedia('(prefers-color-scheme: light)').addListener(redirectToAppropriateSite);
-  </script>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/theme/js/script.js"></script> 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/smoothscroll/smooth-scroll.js"></script>
-<script src="assets/ytplayer/index.js"></script>
-<script src="assets/dropdown/js/navbar-dropdown.js"></script>
-<script src="assets/theme/js/script.js"></script>    
-
-  
-<script>
-    function copyToClipboard() {
-        var link = document.getElementById("linkToCopy").innerText;
-        var tempInput = document.createElement("input");
-        tempInput.value = link;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-        alert("Link copied to clipboard!");
-    }
-</script>
-</body>
-</html>
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script> 
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  // Load saved profile
+		  const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
+		  if (savedProfile) {
+			const welcomeUser = document.getElementById('welcomeUser');
+			const navProfilePic = document.getElementById('navProfilePic');
+			welcomeUser.textContent = `Welcome, ${savedProfile.name}`;
+			welcomeUser.setAttribute('style', 'color: black !important;');  // Set text color to white with high priority
+			
+			if (savedProfile.profilePic) {
+			  navProfilePic.src = savedProfile.profilePic;
+			  navProfilePic.classList.remove('hidden');
+			}
+		  }
+		});
+	  </script>
+	   <script>
+		// Function to redirect based on color scheme
+		function redirectToAppropriateSite() {
+		  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			// Redirect to the dark mode URL
+			window.location.href = "dark/index.html";
+	
+		  }
+		}
+	  
+		// Check color scheme preference on load
+		redirectToAppropriateSite();
+	  
+		// Add an event listener to detect changes in color scheme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(redirectToAppropriateSite);
+		window.matchMedia('(prefers-color-scheme: light)').addListener(redirectToAppropriateSite);
+	  </script>
+	  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+	  <script src="assets/ytplayer/index.js"></script>
+	  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+	  <script src="assets/theme/js/script.js"></script> 
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/smoothscroll/smooth-scroll.js"></script>
+	<script src="assets/ytplayer/index.js"></script>
+	<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+	<script src="assets/theme/js/script.js"></script>    
+	
+	  
+	<script>
+		function copyToClipboard() {
+			var link = document.getElementById("linkToCopy").innerText;
+			var tempInput = document.createElement("input");
+			tempInput.value = link;
+			document.body.appendChild(tempInput);
+			tempInput.select();
+			document.execCommand("copy");
+			document.body.removeChild(tempInput);
+			alert("Link copied to clipboard!");
+		}
+	</script>
+	</body>
+	</html>
